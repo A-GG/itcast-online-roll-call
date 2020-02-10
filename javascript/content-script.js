@@ -1,5 +1,4 @@
 const tpl = `
-    <div class="class-info">
       <div class="class-name">当前班级：{{className}}</div>
       <div class="total-students">学生总数：{{totalStudents}}</div>
       <div class="online-students">在线学生数量：{{onlineStudents}}</div>
@@ -11,7 +10,6 @@ const tpl = `
           <span>{{v}}</span>
         {{/each}}
       </div>
-    </div>
 `;
 
 async function loadData() {
@@ -53,7 +51,8 @@ async function loadData() {
           renderObj.offlineStudentsDetails.push(student);
         }
       });
-      $(".numo").append(render(renderObj));
+      $(".class-info").empty();
+      $(".class-info").html(render(renderObj));
     }
   });
 }
@@ -64,5 +63,10 @@ $(() => {
       $(".class-info").toggle();
     })
     .appendTo($(".numo"));
+  
+  $(".numo").append(`<div class="class-info"></div>`)
   loadData();
+
+  $("#users").on("DOMNodeInserted", loadData);
+  $("#users").on("DOMNodeRemoved", loadData);
 });
