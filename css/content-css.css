@@ -1,0 +1,12 @@
+.numo{
+  height: auto;
+}
+
+.btn-attendance{
+  color: red;
+  cursor: pointer;
+}
+
+.class-info{
+  display: none;
+}
