@@ -40,6 +40,11 @@ function getClassList() {
   });
 }
 
+async function getClassByName(className) {
+  let result = await getClassList();
+  return result.classList.find(v => v.className == className);
+}
+
 async function getClassInfo(id) {
   let result = await getClassList();
   return result.classList.find(v => v.id == id);
