@@ -3,6 +3,7 @@ const tpl = `
       <div class="class-name">当前班级：{{$data.className}}</div>
       <div class="total-students">学生总数：</div>
       <div class="online-students">在线学生数量：</div>
+      <div class="online-attendance">班级出勤率：</div>
       <div class="online-teachers">在线老师数量：</div>
       <div class="offline-students">缺勤数量：</div>
       <div class="offline-students-details">缺勤学生：</div>
@@ -10,6 +11,10 @@ const tpl = `
 `
 
 function loadData(){
+
+  const roomId = $("#roomId").val();
+  const userId = $("#userId").val();
+
   let render = template.compile(tpl);
   let className = document.title.split("-")[0]
   $(".numo").append(render({className}));

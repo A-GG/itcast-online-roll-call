@@ -9,4 +9,5 @@
 
 .class-info{
   display: none;
+  z-index: 99999;
 }

@@ -3,13 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./css/popup.css">
+  <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
   <title>Document</title>
 </head>
 <body>
-  <div class="main">
+  <div class="container-fluid">
+    <h2>黑马程序员-直播间点名系统 <button class="btn btn-success pull-right" data-toggle="modal" data-target="#myModal">新增班级</button></h2>
     
-    <div class="importstudents"></div>
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>班级名称</th>
+          <th>班级学员总数</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="students-table">
+
+      </tbody>
+    </table>
   </div>
+
+  <script type="text/template" id="students-table-tpl">
+    {{each classList v i}}
+      <tr>
+        <td>{{i + 1}}</td>
+        <td>{{v.className}}</td>
+        <td>{{v.studentsList.length}}</td>
+        <td><button class="btn btn-danger btn-xs btnDel" data-id="{{v.id}}">删除</button><button class="btn btn-warning btn-xs btnEdit" data-id="{{v.id}}">修改</button></td>
+      </tr>
+    {{/each}}
+    
+  </script>
+
+  <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">新增班级</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" id="formAddClass">
+            <div class="form-group">
+              <label for="class-name" class="col-sm-2 control-label">班级名称</label>
+              <div class="col-sm-10">
+                <input type="hidden" name="id" id="class-id">
+                <input type="text" class="form-control" name="className" id="class-name" placeholder="需要和直播间标题班级名称保持一致，如：上海黑马前端与移动开发就业班55期">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="students-list" class="col-sm-2 control-label">学员列表</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" rows="3" id="students-list" name="studentsList" placeholder="每个学员姓名一行"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveInfo">保存</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <script src="./javascript/jquery-3.4.1.min.js"></script>
+  <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./javascript/template-web.js"></script>
+  <script src="./javascript/storage.js"></script>
   <script src="./javascript/popup.js"></script>
+
 </body>
 </html>
