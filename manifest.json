@@ -18,8 +18,11 @@
       "js": [
         "javascript/underscore-min.js",
         "javascript/jquery-3.4.1.min.js",
+        "javascript/jquery.cookie-1.4.1.min.js",
         "javascript/template-web.js",
         "javascript/storage.js",
+        "javascript/socket.io.js",
+        "javascript/socket.js",
         "javascript/content-script.js"
       ],
       "css": ["css/content-css.css"],
