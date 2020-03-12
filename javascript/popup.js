@@ -23,7 +23,7 @@ template.defaults.imports.uriDecoded = function(value){
 $(() => {
   loadData();
   $("#saveInfo").click(async () => {
-    let formInfo = decodeURI($("#formAddClass").serialize());
+    let formInfo = decodeURIComponent($("#formAddClass").serialize());
     formInfo = parseForm(formInfo);
     await addOrEditClass(formInfo);
     $("#myModal").modal("hide");
@@ -43,6 +43,7 @@ $(() => {
     let classInfo = await getClassInfo(className);
     $("#class-id").val(classInfo.id);
     $("#class-name").val(classInfo.className);
+    $("#class-school").val(classInfo.classSchool);
     $("#students-list").val(classInfo.studentsList.join("\r\n"));
     $("#myModal").modal("show");
   });

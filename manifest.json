@@ -1,6 +1,6 @@
 {
-  "name": "黑马直播间点名工具",
-  "version": "1.0",
+  "name": "黑马直播间点名工具 2.0",
+  "version": "2.0",
   "description": "黑马程序员直播间点名工具，辅助班主任和辅导老师进行班级学员线上点名工作",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "browser_action": {
@@ -14,8 +14,14 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["javascript/jquery-3.4.1.min.js", "javascript/template-web.js","javascript/storage.js" ,"javascript/content-script.js"],
+      "matches": ["https://view.csslcloud.net/api/view/assistant*"],
+      "js": [
+        "javascript/underscore-min.js",
+        "javascript/jquery-3.4.1.min.js",
+        "javascript/template-web.js",
+        "javascript/storage.js",
+        "javascript/content-script.js"
+      ],
       "css": ["css/content-css.css"],
       "run_at": "document_end"
     }
@@ -27,5 +33,5 @@
     "128": "images/logo128.png"
   },
   "manifest_version": 2,
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'" 
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
