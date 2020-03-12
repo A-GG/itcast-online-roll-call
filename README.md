@@ -6,9 +6,9 @@
 
 ## 下载
 
-点击链接下载 [![点击链接下载](https://badgen.net/github/assets-dl/finish8/itcast-online-roll-call)](https://github.com/finish8/itcast-online-roll-call/archive/v2.1.zip)
+点击链接下载 [![点击链接下载](https://badgen.net/github/assets-dl/finish8/itcast-online-roll-call)](https://github.com/finish8/itcast-online-roll-call/archive/v2.2.zip)
 
-[https://github.com/finish8/itcast-online-roll-call/archive/v2.1.zip](https://github.com/finish8/itcast-online-roll-call/archive/v2.1.zip)
+[https://github.com/finish8/itcast-online-roll-call/archive/v2.2.zip](https://github.com/finish8/itcast-online-roll-call/archive/v2.2.zip)
 
 
 ## 安装
