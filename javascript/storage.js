@@ -16,7 +16,8 @@ async function addOrEditClass(classInfo) {
     let tempClass = result.classList.find(v => classInfo.id == v.id);
     tempClass.className = classInfo.className;
     tempClass.studentsList = classInfo.studentsList;
-    tempClass.classSchool = classInfo.classSchool;
+    tempClass.prefixType = classInfo.prefixType;
+    tempClass.classPrefix = classInfo.classPrefix;
   } else {
     classInfo.id = result.classList.length
       ? result.classList[result.classList.length - 1].id + 1

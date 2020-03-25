@@ -5,7 +5,11 @@
 
 body{
   width: 600px;
-  height: 450px;
+  height: 500px;
+}
+
+.control-label{
+  line-height: 2.35;
 }
 
 .td-class-name{
@@ -20,4 +24,8 @@ body{
   -khtml-text-overflow: ellipsis;
   -moz-text-overflow: ellipsis;
   -webkit-text-overflow: ellipsis;
+}
+
+#prefix-example{
+  color: red;
 }
