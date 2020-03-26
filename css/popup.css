@@ -26,6 +26,6 @@ body{
   -webkit-text-overflow: ellipsis;
 }
 
-#prefix-example{
+.prefix-example{
   color: red;
 }

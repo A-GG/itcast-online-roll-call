@@ -3,15 +3,15 @@ const tpl = `
       <div class="online-students-count">在线学生数量：{{userCount}}</div>
       <div class="online-but-not-displayed-studens">在线但未在直播间显示的学生数量: {{userCount - onlineTeachers - onlineStudentsCount}}</div>
       <div class="online-teachers">在线老师数量：{{onlineTeachers}}</div>
-      <div class="online-students">各校区在线数量：
+      <div class="online-students">各班级在线数量：
         {{each onlineStudents v k}}
           <span>{{k}}:{{v.length}}人</span>
         {{/each}}
       </div>
-      <div class="total-students">{{school}}校区应出勤学生总数：{{totalStudents}}</div>
-      <div class="online-attendance">{{school}}校区班级出勤率：{{attendance}}</div>
-      <div class="offline-students">{{school}}校区缺勤数量：{{offlineStudents}}</div>
-      <div class="offline-students-details">{{school}}校区缺勤学生：
+      <div class="total-students">{{classPrefix}}应出勤学生总数：{{totalStudents}}</div>
+      <div class="online-attendance">{{classPrefix}}出勤率：{{attendance}}</div>
+      <div class="offline-students">{{classPrefix}}缺勤数量：{{offlineStudents}}</div>
+      <div class="offline-students-details">{{classPrefix}}缺勤学生：
         {{each offlineStudentsDetails v i}}
           <span>{{v}}</span>
         {{/each}}
@@ -51,7 +51,7 @@ let params = {
     }
 
     let renderObj = {
-      school: classInfo.classSchool,
+      classPrefix: classInfo.classPrefix,
       className: classInfo.className,
       totalStudents: classInfo.studentsList.length,
       onlineStudents: {},
@@ -74,7 +74,7 @@ let params = {
     classInfo.studentsList.forEach(student => {
       if (
         !onlineStudentsList.find(
-          v => v.name == `${renderObj.school}-${student}`
+          v => v.name == `${renderObj.classPrefix}-${student}`
         )
       ) {
         renderObj.offlineStudentsDetails.push(student);
@@ -87,7 +87,7 @@ let params = {
     );
 
     let currentClassOnlineStudents =
-      renderObj.onlineStudents[renderObj.school] || [];
+      renderObj.onlineStudents[renderObj.classPrefix] || [];
     renderObj.attendance = `${(
       currentClassOnlineStudents.length / renderObj.totalStudents
     ).toFixed(4) * 100}%`;

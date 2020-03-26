@@ -82,39 +82,44 @@ $(() => {
   $("#students-table").on("click", ".btnEdit", async function() {
     let className = $(this).data("id");
     let classInfo = await getClassInfo(className);
-    console.log(classInfo)
     $("#class-id").val(classInfo.id);
     $("#class-name").val(classInfo.className);
     $("#prefix-type").val(classInfo.prefixType);
+    changePrefixList(classInfo.prefixType)
     $("#class-prefix").val(classInfo.classPrefix);
     $("#students-list").val(classInfo.studentsList.join("\r\n"));
     $("#myModal").modal("show");
   });
 
   $("#myModal").on("hide.bs.modal",function(){
-    
     $("#formAddClass")[0].reset();
   })
 
   let prefixList = $("#class-prefix");
-  let prefixExample = $("#prefix-example")
+  let prefixExample1 = $("#prefix-example1")
+  let prefixExample2 = $("#prefix-example2")
 
-  $("#prefix-type").change(e => {
+  function changePrefixList (prefixType) {
     prefixList.empty()
-    prefixExample.empty()
-    switch(e.target.value){
+    prefixExample1.empty()
+    prefixExample2.empty()
+    switch(prefixType){
       case "classnumber":
         prefixList.append(classNumberList)
-        prefixExample.text("班级号-学员姓名")
+        prefixExample1.text("班级号-学员姓名")
         break
       case "school":
         prefixList.append(schoolList)
-        prefixExample.text("校区-学员姓名")
+        prefixExample1.text("校区-学员姓名")
         break
     }
+  }
+
+  $("#prefix-type").change(e => {
+    changePrefixList(e.target.value);
   })
 
   prefixList.change(e => {
-    prefixExample.text(`${prefixExample.text()},   例如：${e.target.value}-张三`)
+    prefixExample2.text(`例如：${e.target.value}-张三`)
   })
 });
