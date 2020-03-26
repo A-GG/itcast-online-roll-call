@@ -1,6 +1,6 @@
 {
-  "name": "黑马直播间点名工具 2.3",
-  "version": "2.3",
+  "name": "黑马直播间点名工具 2.3.1",
+  "version": "2.3.1",
   "description": "黑马程序员直播间点名工具，辅助班主任和辅导老师进行班级学员线上点名工作",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "browser_action": {
