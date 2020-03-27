@@ -4,6 +4,12 @@
 
 插件仅供黑马程序员内部使用，辅助班主任老师进行线上点名工作
 
+## 最新更新内容
+
+* 全国班级合班需求
+* 实现了以班级号作为学员名称前缀
+* 保留之前按照校区划分的功能
+
 ## 下载
 
 点击链接下载 [![点击链接下载](https://badgen.net/github/release/finish8/itcast-online-roll-call)](https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.1/v2.3.1.zip)
