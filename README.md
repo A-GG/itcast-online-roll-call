@@ -1,4 +1,7 @@
-# 黑马直播间在线点名插件
+
+<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="../itcast-online-roll-call/images/logo128.png" alt="Heima logo"></a></p>
+
+<h2 align="center">黑马直播间在线点名插件</h2>
 
 ## 描述
 
