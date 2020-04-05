@@ -15,7 +15,7 @@
 
 点击链接下载 [![点击链接下载](https://badgen.net/github/release/finish8/itcast-online-roll-call)](https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.2/v2.3.2.zip)
 
-[https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.1/v2.3.1.zip](https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.2/v2.3.2.zip)
+[https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.2/v2.3.2.zip](https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.2/v2.3.2.zip)
 
 
 ### 安装
