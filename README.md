@@ -7,15 +7,16 @@
 
 ### 最新更新内容
 
+* 校区中添加了“北京”
 * 全国班级合班需求
 * 实现了以班级号作为学员名称前缀
 * 保留之前按照校区划分的功能
 
 ### 下载
 
-点击链接下载 [![点击链接下载](https://badgen.net/github/release/finish8/itcast-online-roll-call)](https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.2/v2.3.2.zip)
+点击链接下载 [![点击链接下载](https://badgen.net/github/release/finish8/itcast-online-roll-call)](https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.3/v2.3.3.zip)
 
-[https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.2/v2.3.2.zip](https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.2/v2.3.2.zip)
+[https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.3/v2.3.3.zip](https://github.com/A-GG/itcast-online-roll-call/releases/download/v2.3.3/v2.3.3.zip)
 
 
 ### 安装
